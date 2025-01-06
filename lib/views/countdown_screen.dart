@@ -12,7 +12,7 @@ class _NewYearAnimationState extends State<NewYearAnimation> with TickerProvider
   late AnimationController _balloonController;
   late AnimationController _numberController;
   late AnimationController _transitionController;
-  late AnimationController _textController;  // Declare the _textController
+  late AnimationController _textController;
   late Animation<double> _balloonAnimation;
   late Animation<Offset> _numberSlideAnimation;
   late ConfettiController _confettiController;
@@ -54,11 +54,12 @@ class _NewYearAnimationState extends State<NewYearAnimation> with TickerProvider
       vsync: this,
     );
 
+    // Initialize confetti controller with longer duration
     _confettiController = ConfettiController(
-      duration: const Duration(seconds: 1),
+      duration: const Duration(seconds: 3),
     );
 
-    _textController = AnimationController( // Initialize the _textController
+    _textController = AnimationController(
       duration: const Duration(seconds: 2),
       vsync: this,
     );
@@ -77,17 +78,9 @@ class _NewYearAnimationState extends State<NewYearAnimation> with TickerProvider
     return Scaffold(
       body: Stack(
         children: [
-          // Base Animation Screen
           Container(
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Color(0xFF4A148C), // Deeper purple
-                  Color(0xFF1A237E), // Deeper blue
-                ],
-              ),
+              color: Colors.black,
             ),
             child: Stack(
               children: [
@@ -117,7 +110,6 @@ class _NewYearAnimationState extends State<NewYearAnimation> with TickerProvider
                     ],
                   ),
                 ),
-
 
                 // Balloon and "4" animation
                 Positioned(
@@ -172,38 +164,31 @@ class _NewYearAnimationState extends State<NewYearAnimation> with TickerProvider
                     ),
                   ),
                 ),
-
               ],
             ),
           ),
 
-          // New Year Celebration Screen
+          // New Year Celebration Screen with Multiple Confetti Sources
           if (_showNewScreen)
             FadeTransition(
               opacity: _transitionController,
               child: Container(
                 decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      Color(0xFF4A148C), // Deeper purple
-                      Color(0xFF1A237E), // Deeper blue
-                    ],
-                  ),
+                  color: Colors.black,
                 ),
                 child: Stack(
                   children: [
+                    // Left confetti source
                     Align(
-                      alignment: Alignment.topCenter,
+                      alignment: Alignment.centerLeft,
                       child: ConfettiWidget(
                         confettiController: _confettiController,
-                        blastDirection: pi / 2,
-                        maxBlastForce: 4,
+                        blastDirection: 0, // Shoots right
+                        emissionFrequency: 0.05,
+                        numberOfParticles: 20,
+                        maxBlastForce: 5,
                         minBlastForce: 2,
-                        emissionFrequency: 0.03,
-                        numberOfParticles: 30,
-                        gravity: 0.05,
+                        gravity: 0.1,
                         colors: const [
                           Colors.blue,
                           Colors.pink,
@@ -213,6 +198,49 @@ class _NewYearAnimationState extends State<NewYearAnimation> with TickerProvider
                         ],
                       ),
                     ),
+
+                    // Right confetti source
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: ConfettiWidget(
+                        confettiController: _confettiController,
+                        blastDirection: pi, // Shoots left
+                        emissionFrequency: 0.05,
+                        numberOfParticles: 20,
+                        maxBlastForce: 5,
+                        minBlastForce: 2,
+                        gravity: 0.1,
+                        colors: const [
+                          Colors.blue,
+                          Colors.pink,
+                          Colors.green,
+                          Colors.orange,
+                          Colors.purple,
+                        ],
+                      ),
+                    ),
+
+                    // Top center confetti source
+                    Align(
+                      alignment: Alignment.topCenter,
+                      child: ConfettiWidget(
+                        confettiController: _confettiController,
+                        blastDirection: pi / 2,
+                        emissionFrequency: 0.05,
+                        numberOfParticles: 30,
+                        maxBlastForce: 5,
+                        minBlastForce: 2,
+                        gravity: 0.1,
+                        colors: const [
+                          Colors.blue,
+                          Colors.pink,
+                          Colors.green,
+                          Colors.orange,
+                          Colors.purple,
+                        ],
+                      ),
+                    ),
+
                     Center(
                       child: FadeTransition(
                         opacity: _textController,
@@ -222,7 +250,11 @@ class _NewYearAnimationState extends State<NewYearAnimation> with TickerProvider
                             ShaderMask(
                               shaderCallback: (bounds) {
                                 return LinearGradient(
-                                  colors: [Colors.blue.withOpacity(0.8), Colors.white.withOpacity(0.8), Colors.orange.withOpacity(0.8)], // Apply opacity to the gradient colors
+                                  colors: [
+                                    Colors.blue.withOpacity(0.8),
+                                    Colors.white.withOpacity(0.8),
+                                    Colors.orange.withOpacity(0.8)
+                                  ],
                                   begin: Alignment.topLeft,
                                   end: Alignment.bottomRight,
                                 ).createShader(bounds);
@@ -236,17 +268,18 @@ class _NewYearAnimationState extends State<NewYearAnimation> with TickerProvider
                                   shadows: [
                                     Shadow(
                                       blurRadius: 10.0,
-                                      color: Colors.black.withOpacity(0.5), // Black shadow with some opacity
-                                      offset: Offset(4.0, 4.0), // Shadow offset
+                                      color: Colors.black.withOpacity(0.5),
+                                      offset: Offset(4.0, 4.0),
                                     ),
                                   ],
                                 ),
                               ),
                             ),
+                            SizedBox(height: 20),
                             ShaderMask(
                               shaderCallback: (bounds) {
                                 return LinearGradient(
-                                  colors: [Color(0xFF00C6FB), Color(0xFF005BEA)], // Gradient from bright cyan to deep blue
+                                  colors: [Color(0xFF00C6FB), Color(0xFF005BEA)],
                                   begin: Alignment.topLeft,
                                   end: Alignment.bottomRight,
                                 ).createShader(bounds);
@@ -260,8 +293,6 @@ class _NewYearAnimationState extends State<NewYearAnimation> with TickerProvider
                                 ),
                               ),
                             )
-
-
                           ],
                         ),
                       ),
@@ -312,8 +343,10 @@ class _NewYearAnimationState extends State<NewYearAnimation> with TickerProvider
   void _showTransitionScreen() {
     setState(() => _showNewScreen = true);
     _transitionController.forward();
-    _confettiController.play();
-    _textController.forward(); // Start the text fade-in effect
+    Future.delayed(Duration(milliseconds: 200), () {
+      _confettiController.play();
+    });
+    _textController.forward();
   }
 
   void _startAnimation() {
@@ -329,7 +362,7 @@ class _NewYearAnimationState extends State<NewYearAnimation> with TickerProvider
     _balloonController.dispose();
     _numberController.dispose();
     _transitionController.dispose();
-    _textController.dispose(); // Dispose the _textController
+    _textController.dispose();
     _confettiController.dispose();
     super.dispose();
   }

@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
 
     // Text animation controller
     _textController = AnimationController(
-      duration: Duration(seconds: 10),
+      duration: Duration(seconds: 20),
       vsync: this,
     );
 
@@ -30,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
     _textController.forward();
     _lottieController.forward();
 
-    Future.delayed(Duration(seconds: 10), () {
+    Future.delayed(Duration(seconds: 20), () {
       Navigator.pushReplacement(
         context,
         PageRouteBuilder(
