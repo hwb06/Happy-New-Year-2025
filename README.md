@@ -1,16 +1,40 @@
-# flutter_countdown_newyearapp25
+# Flutter Happy New Year App 2025
+ 
+## **Project Description**
+🎉 **Cᴇʟᴇʙʀᴀᴛᴇ ᴛʜᴇ Nᴇᴡ Yᴇᴀʀ ᴡɪᴛʜ ᴀ Fʟᴜᴛᴛᴇʀ-Pᴏᴡᴇʀᴇᴅ Aᴘᴘ!**
 
-A new Flutter project.
+♥ Iɴᴛʀᴏᴅᴜᴄɪɴɢ ᴀ ғᴇsᴛɪᴠᴇ ᴀɴᴅ ɪɴᴛᴇʀᴀᴄᴛɪᴠᴇ Fʟᴜᴛᴛᴇʀ ᴀᴘᴘ – Designed to ring in 2025 with style! The app features a smooth splash screen transition followed by an exciting "𝗣𝗹𝗮𝘆" button that triggers an animated "𝐇𝐚𝐩𝐩𝐲 𝐍𝐞𝐰 𝐘𝐞𝐚𝐫 𝟐𝟎𝟐𝟓" message, accompanied by a 𝗰𝗼𝗻𝗳𝗲𝘁𝘁𝗶 effect. A perfect way to welcome the new year with fun and joy!
 
-## Getting Started
+## ♥ **Kᴇʏ Fᴇᴀᴛᴜʀᴇꜱ**:
+- 𝐒𝐩𝐥𝐚𝐬𝐡 𝐒𝐜𝐫𝐞𝐞𝐧 with a 20-second display.
+- Interactive "𝗣𝗹𝗮𝘆" Button for instant animation.
+- 𝐂𝐨𝐧𝐟𝐞𝐭𝐭𝐢 𝐄𝐟𝐟𝐞𝐜𝐭 for a festive celebration.
+- 𝐇𝐚𝐩𝐩𝐲 𝐍𝐞𝐰 𝐘𝐞𝐚𝐫 𝟐𝟎𝟐𝟓 animation.
 
-This project is a starting point for a Flutter application.
+## ♥ **Bᴜɪʟᴛ Wɪᴛʜ**:
+- 𝗙𝗹𝘂𝘁𝘁𝗲𝗿 & 𝗗𝗮𝗿𝘁 for sleek, cross-platform functionality. 
+- 𝐀𝐧𝐢𝐦𝐚𝐭𝐞𝐝 𝐓𝐫𝐚𝐧𝐬𝐢𝐭𝐢𝐨𝐧𝐬 for an engaging user experience
 
-A few resources to get you started if this is your first Flutter project:
+- Lᴇᴛ’s ᴄᴇʟᴇʙʀᴀᴛᴇ the start of an exciting new year with a fun and memorable app experience! 🌟
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## ♥ **Hᴀsʜᴛᴀɢs**:
+#HappyNewYear2025 #FlutterDev #MobileApp #AppDevelopment #Animation #NewYearApp #CrossPlatformDev #ConfettiEffect #AppDesign #Flutter #TechInnovation #MobileDevelopment #NewYearCelebration
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## **App UIs Screenshots**
+Here are some screenshots of the app:
+
+![Splash Screen](https://github.com/hwb06/Happy-New-Year-2025/blob/main/App%20UI_Screens/Splash%20Screen.JPG?raw=true)  
+![Main Screen](https://github.com/hwb06/Happy-New-Year-2025/blob/main/App%20UI_Screens/main%20screen(new%20updated).JPG?raw=true)  
+![Happy New Year Confetti](https://github.com/hwb06/Happy-New-Year-2025/blob/main/App%20UI_Screens/HappyNewYear%20confettee(new%20updated).JPG?raw=true)  
+
+
+### **App Demo**
+You can download and view the demo video of the app here:
+
+[Flutter_Happy_New_Year_App_2025 Link](https://github.com/hwb06/Happy-New-Year-2025/releases/tag/v1.0.0)
+
+## **Contact Information**
+If you have any questions or feedback, feel free to reach out:
+
+- Email: hussnainwaheed864@gmail.com
+- GitHub: [@hwb06](https://github.com/hwb06)
