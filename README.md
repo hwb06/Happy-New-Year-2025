@@ -30,7 +30,7 @@ Here are some screenshots of the app:
 ### **App Demo**
 You can download and view the demo video of the app here:
 
-[Flutter_Happy_New_Year_App_2025 Link](https://github.com/hwb06/Happy-New-Year-2025/releases/tag/v1.0.0)
+[Flutter_Happy_New_Year_App_2025 Link](https://www.dropbox.com/scl/fi/0dqq821aq57kopm1g0hcb/App-Reel.mp4?rlkey=dhulq2yc6rvr5xv7wlysefczy&st=9tnejcrk&dl=0)
 
 ## **Contact Information**
 If you have any questions or feedback, feel free to reach out:
